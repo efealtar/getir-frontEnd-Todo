@@ -25,8 +25,9 @@ import {
 
 import { useDispatch } from "react-redux";
 import { AppDispatch } from "../redux/store/store";
+import { Todo } from "../redux/types/types";
 
-const SingleItem = ({ todo }: { todo: any }) => {
+const SingleItem = ({ todo }: { todo: Todo }) => {
 	const dispatch = useDispatch<AppDispatch>();
 
 	const [updateText, setUpdateText] = React.useState("");
