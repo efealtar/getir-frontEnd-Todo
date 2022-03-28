@@ -34,7 +34,7 @@ const SingleItem = ({ todo }: { todo: Todo }) => {
 
 	const [open, setOpen] = React.useState(false);
 
-	//Makin Update Dialog Responsive
+	//Making Update Dialog Responsive
 	const theme = useTheme();
 	const fullScreen = useMediaQuery(theme.breakpoints.down("xs"));
 
