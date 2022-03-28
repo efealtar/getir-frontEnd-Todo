@@ -46,10 +46,13 @@ const SingleItem = ({ todo }: { todo: Todo }) => {
 		setOpen(false);
 	};
 
-	const handleUpdate = (id: string) => {
-		dispatch(updateTodo({ id, todoText: updateText }));
-		setOpen(false);
-	};
+	const handleUpdate = React.useCallback(
+		(id: string) => {
+			dispatch(updateTodo({ id, todoText: updateText }));
+			setOpen(false);
+		},
+		[dispatch, updateText]
+	);
 
 	return (
 		<ListItem>
